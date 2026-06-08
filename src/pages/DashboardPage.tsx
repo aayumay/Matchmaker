@@ -40,7 +40,10 @@ const metrics = [
 export default function DashboardPage() {
   const { dark } = useTheme();
   const navigate = useNavigate();
-  const featuredProfiles = profiles.slice(0, 2);
+  const featuredProfiles = [
+    profiles.find(p => p.id === 'p001')!,
+    profiles.find(p => p.id === 'p002')!
+  ];
   const today = new Intl.DateTimeFormat('en-GB', {
     weekday: 'long',
     day: 'numeric',
@@ -80,11 +83,11 @@ export default function DashboardPage() {
 
             <div className="mt-9 grid flex-1 gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
               <div>
-                <div className="mb-5 flex -space-x-5">
+                <div className="mb-5 flex -space-x-6">
                   {featuredProfiles.map((profile, index) => (
                     <div
                       key={profile.id}
-                      className="relative h-24 w-20 overflow-hidden border-2 border-[#11110f] bg-neutral-800"
+                      className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border-[3px] border-[#11110f] bg-neutral-800 shadow-2xl"
                       style={{ zIndex: 2 - index }}
                     >
                       <img
