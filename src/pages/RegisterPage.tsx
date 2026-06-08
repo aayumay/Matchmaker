@@ -109,7 +109,7 @@ export default function RegisterPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#11110f] via-transparent to-transparent z-10" />
         <img
           className="absolute inset-0 h-full w-full object-cover portrait-treatment opacity-40"
-          src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
           alt="Matchmaker office"
         />
         <div className="absolute bottom-20 left-20 z-20 max-w-lg">
